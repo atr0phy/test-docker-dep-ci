@@ -1,10 +1,10 @@
 name: build
 on:
   push:
-    paths:
-      - /datadog-agent/
-    branches:
+    branches_ignore:
       - main
+    paths:
+      - 'datadog-agent/*'
 jobs:
   build:
     name: Build
@@ -15,7 +15,7 @@ jobs:
       
       - name: Build an image from Dockerfile
         run: |
-          docker build -t test:${{ github.sha }} .
+          docker build -t test:${{ github.sha }} datadog-agent/
       
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
