@@ -4,7 +4,7 @@ on:
     branches_ignore:
       - main
     paths:
-      - 'datadog-agent/'
+      - 'datadog-agent/*'
 jobs:
   build:
     name: Build
