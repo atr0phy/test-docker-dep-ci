@@ -11,7 +11,7 @@ jobs:
       
       - name: Build an image from Dockerfile
         run: |
-          docker build -t test:${{ github.sha }} .
+          docker build -t test:${{ github.sha }} datadog-agent/Dockerfile
       
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
