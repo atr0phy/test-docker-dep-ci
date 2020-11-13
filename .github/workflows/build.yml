@@ -3,6 +3,8 @@ on:
   push:
     branches_ignore:
       - main
+    paths:
+      - 'datadog-agent/'
 jobs:
   build:
     name: Build
