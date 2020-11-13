@@ -1,8 +1,6 @@
 name: build
 on:
-  pull_request:
-    paths:
-      - /datadog-agent/
+  push:
     branches:
       - main
 jobs:
